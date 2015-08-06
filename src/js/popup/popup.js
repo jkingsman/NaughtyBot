@@ -55,7 +55,7 @@ function populateTable(domain_endpoints, current_domain) {
     while (table.firstChild) {
       table.removeChild(table.firstChild);
     }
-    table.innerHTML = "<tr><th>URL</th><th>Status</th></tr>";
+    table.innerHTML = '<tr><th style="width: 70%;">URL</th><th style="width: 30%;">Status</th></tr>';
 
     document.getElementById('status').innerHTML = current_domain + ': Loading...';
 
@@ -82,7 +82,7 @@ function populateTable(domain_endpoints, current_domain) {
 
     }
     document.getElementById('status').innerHTML = current_domain + '<br /><button class="btn btn-success btn-sm" id="-1" type="button">Query All</button>';
-    table.style.display = 'inline';
+    table.style.display = 'table';
   } else {
     document.getElementById('status').innerHTML = 'No robots exclusions.';
   }
