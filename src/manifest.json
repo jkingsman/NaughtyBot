@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "NaughtyBot",
+  "short_name": "NaughtyBot",
+  "version": "1.0.9",
+  "description": "Explore the the off-limits areas that websites don't want Google to see.",
+  "author": "Jack Kingsman <jack.kingsman@gmail.com>",
+  "homepage_url": "https://github.com/jkingsman/NaughtyBot",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "NaughtyBot",
+    "default_icon": {
+      "19": "img/naughtybot19.png",
+      "38": "img/naughtybot38.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/naughtybot16.png",
+    "48": "img/naughtybot48.png",
+    "128": "img/naughtybot128.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content_script.js"],
+    "run_at": "document_end"
+  }],
+  "options_page": "options.html",
+  "permissions": [
+    "tabs"
+  ]
+}
