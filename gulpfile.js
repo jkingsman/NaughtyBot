@@ -63,7 +63,7 @@ gulp.task('js-popup', function () {
 
 //lib
 gulp.task('js-lib', function () {
-    gulp.src(['./src/js/lib/jquery-1.9.1.js', './src/js/lib/bootstrap.js'])
+    gulp.src(['./src/js/lib/bootstrap.js'])
     .pipe(uglify())
     .pipe(concat('lib.js'))
     .pipe(gulp.dest('./dist/'));
@@ -78,7 +78,7 @@ gulp.task('copy', function () {
 
 gulp.task('zip', ['default'], function () {
     return gulp.src('dist/**/*')
-        .pipe(zip('bishop.zip'))
+        .pipe(zip('NaughtyBot.zip'))
         .pipe(gulp.dest('./'));
 });
 

@@ -30,7 +30,7 @@ Bishop is MIT licensed and open source; contribute at https://github.com/jkingsm
 | `gulp` command  | result |
 | ------------- | ------------- |
 | `gulp`  | Lint the code and build the `src` directory into the `dist` directory. `dist` can be imported as an unpacked extension.  |
-| `gulp zip`  | Lint the code and build the `src` directory into the `dist` directory, then zip the `dist` directory into `bishop.zip` in the root `bishop` folder.  |
+| `gulp zip`  | Lint the code and build the `src` directory into the `dist` directory, then zip the `dist` directory into `NaughtyBot.zip` in the root `NaughtyBot` folder.  |
 | `gulp watch`  | Build the `src` directory into the `dist` directory and rebuild on changes to `src`.  |
 | `gulp hint`  | Lint all non-lib js. Doesn't build anything; done as part of `gulp` and `gulp zip`.  |
 
