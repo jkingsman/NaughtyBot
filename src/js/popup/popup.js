@@ -21,7 +21,7 @@ function init_list() {
     if (e.target.href !== undefined) {
       chrome.tabs.create({
         url: e.target.href
-      })
+      });
     } else {
       // query the endpoint
       chrome.runtime.sendMessage({
@@ -30,7 +30,7 @@ function init_list() {
         id: e.target.id
       });
     }
-  })
+  });
 
   // fill er up
   chrome.runtime.sendMessage({
@@ -46,7 +46,7 @@ function init_list() {
   }, function(response) {
     populateTable(response, current_domain);
   });
-};
+}
 
 function populateTable(domain_endpoints, current_domain) {
   if (domain_endpoints.count > 0) {

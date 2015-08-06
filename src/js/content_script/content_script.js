@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener(
     if (request.type === 'site-check-response' && !request.hasSite) {
       // this is a new site
       robotsReq.open('GET', fqdn + robotsURL, true);
-      robotsReq.onload = function (e) {
+      robotsReq.onload = function(e) {
         if (robotsReq.readyState === 4) {
           if (robotsReq.status === 200) {
             paths = parseRobots(robotsReq.responseText);
@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener(
               type: 'site-data-add',
               paths: paths,
               domain: fqdn
-            }, function (response) {
+            }, function(response) {
               // once the site is loaded, set the badge
               chrome.runtime.sendMessage({
                 type: 'set-badge',
@@ -60,7 +60,7 @@ function parseRobots(rawBots) {
     if (!parsedLine) {
       //ignore null results
     } else if (parsedLine.type == GROUP_MEMBER) {
-      if (parsedLine.rule = 'disallow') {
+      if (parsedLine.rule == 'disallow') {
         //only grab disallowed URLs
         robotPaths.push(parsedLine.path);
       }
