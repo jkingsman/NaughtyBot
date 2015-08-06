@@ -61,14 +61,6 @@ gulp.task('js-popup', function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-//lib
-gulp.task('js-lib', function () {
-    gulp.src(['./src/js/lib/bootstrap.js'])
-    .pipe(uglify())
-    .pipe(concat('lib.js'))
-    .pipe(gulp.dest('./dist/'));
-});
-
 //move over remaining files
 gulp.task('copy', function () {
     return gulp.src(['./src/audio/**/*', './src/img/**/*', './src/fonts/**/*', './src/manifest.json'], {
@@ -83,7 +75,7 @@ gulp.task('zip', ['default'], function () {
 });
 
 //tie it all together
-gulp.task('js', ['js-background', 'js-content', 'js-popup','js-lib'])
+gulp.task('js', ['js-background', 'js-content', 'js-popup'])
 gulp.task('css', ['main-css'])
 
 //realtime watching
