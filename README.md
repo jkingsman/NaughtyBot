@@ -1,7 +1,7 @@
 # NaughtyBot
 NaughtyBot scans robots.txt files explore parts of websites that owners don't want Google to find.
 
-Bishop is MIT licensed and open source; contribute at https://github.com/jkingsman/NaughtyBot.
+NaughtyBot is MIT licensed and open source; contribute at https://github.com/jkingsman/NaughtyBot.
 
 ## Installation
 
